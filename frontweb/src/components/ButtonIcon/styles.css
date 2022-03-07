@@ -20,6 +20,7 @@
     align-items: center;
     background-color: #335698;
     border-radius: 0px 10px 10px 0px;
+    color: #FFF;
 }
 
 @media (min-width: 576px) {
