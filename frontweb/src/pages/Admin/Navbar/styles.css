@@ -1,0 +1,36 @@
+.admin-nav-container {
+    padding: 10px;
+    background-color: #FFF;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #F2F2F2;
+  border-radius: 100px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #9E9E9E;
+  letter-spacing: -0.015em;
+}
+
+
+.admin-nav-item.active {
+  background-color: rgba(64, 123, 255, 0.3);
+  color: #407BFF;
+}
+
+.admin-nav-item p {
+  margin-bottom: 0;
+}
