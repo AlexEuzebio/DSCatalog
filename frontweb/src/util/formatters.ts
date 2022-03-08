@@ -1,3 +1,5 @@
+//Rotinas para formatações
+
 export const formatPrice = (price: number) => {
 
   const params = {maximumFractionDigits: 2, minimumFractionDigits: 2 };
