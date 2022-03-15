@@ -1,8 +1,6 @@
-import qs from 'qs';
-
 //Rotinas para requisições
 
-import { getMaxListeners } from "process";
+import qs from 'qs';
 import axios from 'axios';
 
 export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'http://localhost:8080';
@@ -10,9 +8,8 @@ export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'http://localhost:8
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? 'dscatalog';
 const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET ?? 'dscatalog123';
 
-const basicHeader = () => 'Basic ' + window.btoa( CLIENT_ID + ':' + CLIENT_SECRET);
+/******* Requisição de login
 
-/*
 Para fazer a requisição de login, precisamos passar:
 1- headers (cabeçalho)
 2- body (corpo da requisição)
