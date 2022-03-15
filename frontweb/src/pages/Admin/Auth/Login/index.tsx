@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import ButtonIcon from 'components/ButtonIcon';
 import { useForm } from 'react-hook-form';
 import { requestBackendLogin, saveAuthData } from 'util/requests';
@@ -14,6 +14,7 @@ type FormData = {
 const Login = () => {
   const [hasError, setHasError] = useState(false);
   const { register, handleSubmit, watch, formState: {errors} } = useForm<FormData>();
+  const history = useHistory();
 
   const onSubmit = (formData: FormData) => {
     requestBackendLogin(formData)
@@ -21,6 +22,7 @@ const Login = () => {
         saveAuthData(response.data);
         setHasError(false);
         console.log('SUCESSO', response);
+        history.push('/admin');
       })
       .catch((error) => {
         setHasError(true);
