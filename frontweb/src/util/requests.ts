@@ -2,6 +2,7 @@
 
 import qs from 'qs';
 import axios, { AxiosRequestConfig } from 'axios';
+import history from './history';
 
 type loginResponse = {
   access_token: string;
@@ -110,5 +111,11 @@ axios.interceptors.response.use(function (response) {
 }, function (error) {
   // Any status codes that falls outside the range of 2xx cause this function to trigger
   // Do something with response error
+  
+  // Verifica se houve retorno de acesso negado
+  if (error.response.status === 401 || error.response.status === 403) {
+    history.push('/admin/auth');
+  }
+  
   return Promise.reject(error);
 });
