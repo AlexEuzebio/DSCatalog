@@ -14,7 +14,7 @@ const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET ?? 'dscatalog123';
 /******* Requisição de login
 
 Para fazer a requisição de login, precisamos passar:
-1- headers (cabeçalho)
+1- headers (cabeçalhos)
 2- body (corpo da requisição)
 
 Aqui, criamos a const headers para conter os cabeçalhos necessários: 

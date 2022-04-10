@@ -26,7 +26,7 @@ const Login = () => {
   const [hasError, setHasError] = useState(false);
   const { register, handleSubmit, watch, formState: {errors} } = useForm<FormData>();
   const history = useHistory();
-
+  
   const onSubmit = (formData: FormData) => {
     requestBackendLogin(formData)
       .then((response) => {
