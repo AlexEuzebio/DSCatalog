@@ -17,6 +17,7 @@
 
 .product-filter-name-container input:focus {
   box-shadow: none;
+  background-color: #FFFFFF;
 }
 
 .product-filter-name-container input::placeholder {
